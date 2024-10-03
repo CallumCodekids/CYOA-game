@@ -23,15 +23,44 @@ if answer == "A":
     print("You cling tightly to your seat and really really hope it's enough of a cushion. It's not. You die. The End.")
 
 elif answer == "B":
-    options_2 = ["Wait on the seat and hope that you don't die when you hit the ground",
-             "Take off your jacket and use it as a parachute",
-             "Pull out the inbuilt parachute in your chair and try to get it working"]
+    options_2 = ["New option A",
+             "New option B",
+             "New option C"]
     print("That works")
     count = 0
     while count < len(options_1):
-        print(f"Do you {valid_answers[count]}: {options_1[count]}")
+        print(f"Do you {valid_answers[count]}: {options_2[count]}")
         count = count +1
-    if answer == "A"
+    answer = ""
+    while not answer in valid_answers:
+        answer = input("Choose A, B, or C")
+    if answer == "A":
+        print("you chose A, here's what happens!")
+        
+        options_3 = ["New option A",
+                 "New option B",
+                 "New option C"]
+        print("That works")
+        count = 0
+        while count < len(options_1):
+            print(f"Do you {valid_answers[count]}: {options_3[count]}")
+            count = count +1
+        answer = ""
+        while not answer in valid_answers:
+            answer = input("Choose A, B, or C")
+        if answer == "A":
+            print("you chose A, here's what happens!")
+        elif answer == "B":
+            print("you chose B, here's what happens!")
+        elif answer == "C":
+            print("you chose C, here's what happens!")
+
+        
+        
+    elif answer == "B":
+        print("you chose B, here's what happens!")
+    elif answer == "C":
+        print("you chose C, here's what happens!")
 
 elif answer == "C":
     print("You try to get the parachute working, but sadly, you've never really had training in parachuting and this definietly wasn't covered by the flight attendent when she was talking about emergency exits. When you hit the ground you're still fumbling with the packaging.You die. The End.")
